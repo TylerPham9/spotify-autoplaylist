@@ -64,5 +64,5 @@ You should get message like `"Welcome to the Spotify Autoplaylist API!"`
 ## Spotify Account
 Email: `spotifyautoplaylist@gmail.com` <br/>
 Password: `spotifycmpt470`
-
+This account is no longer premium and will not work with the project
 
