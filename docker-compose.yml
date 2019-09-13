@@ -1,0 +1,43 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    ports:
+      - "35432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: spotify
+    volumes:
+      - db:/data/db:rw
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/spotify
+      NODE_ENV: production
+      PORT: 9000
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./api:/code:ro
+    links:
+      - postgres
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile-client
+    ports:
+      - "3000:3000"
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-web
+    ports:
+      - "8080:80"
+volumes:
+  db:

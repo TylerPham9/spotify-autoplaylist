@@ -1,0 +1,83 @@
+/*a{
+	color:#FFFFFF;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+a:hover { 
+  background-color: #1DB954 !important;
+}
+
+body {
+	background-color: #535353;
+	overflow-x: auto;
+}
+
+div {
+	display: inline-block;
+}
+
+
+h5{
+	font-weight: 300;
+}
+
+i{
+	overflow: none !important;
+	font-size: 1.5em !important;
+}
+
+.heading{
+	font-size: 2.5em;
+	margin: 0.6em 0em;
+}
+
+.playlistOverflow{
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+.playlistIcons {
+	color: #1DB954;
+}
+
+.row{
+	border-bottom: 1px solid #535353;
+	padding-top: 0.7em !important;
+	padding-bottom: 0.7em !important;
+}
+
+.top {
+	margin: 4em 6em;
+	color: #FFFFFF;
+	width: 100%;
+}
+
+
+.ui.grid{
+	margin: 0 !important;
+	background-color: #212121;
+	text-align: center;
+}
+
+.ui.celled.grid>.column:not(.row), 
+.ui.celled.grid>.row>.column{
+	padding:0.4em;
+}
+
+.ui.grid>.row>.column {
+	margin:auto !important;
+}
+
+.ui.tiny.image{
+	width: 5em;
+	height: auto;
+}
+
+#SongName,
+#SongTags {
+	width: auto;
+	padding: 10px;
+} */

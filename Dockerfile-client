@@ -1,0 +1,11 @@
+FROM node:latest
+WORKDIR /code
+COPY client/package.json /package.json
+RUN cd / && npm install -g
+RUN cd / && rm -rf /node_modules/node-sass && npm install node-sass # work around https://github.com/sass/node-sass/issues/1579
+ADD ./client /code
+
+RUN chmod a+x /node_modules/.bin/react-scripts
+EXPOSE 3000
+
+CMD /node_modules/.bin/react-scripts start

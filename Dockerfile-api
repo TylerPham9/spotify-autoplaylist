@@ -1,0 +1,17 @@
+FROM node:latest
+WORKDIR /code
+COPY api/package.json /package.json
+RUN cd / && npm install -g
+RUN cd / && rm -rf /node_modules/node-sass && npm install node-sass # work around https://github.com/sass/node-sass/issues/1579
+ADD ./api /code
+
+RUN chmod +x /code/wait.sh
+RUN chmod +x /code/db-setup.sh
+
+
+EXPOSE 9000
+# CMD nodemon --exec babel-node app.js
+CMD /code/wait.sh postgres 5432 \
+    && /code/db-setup.sh \ 
+    && npm start
+    # && nodemon --exec babel-node app.js

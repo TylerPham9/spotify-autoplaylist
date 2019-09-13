@@ -1,0 +1,30 @@
+{
+  "name": "spotify-autoplaylist",
+  "version": "1.0.0",
+  "description": "1. Go to the __auth-server__ folder\r 2. Create a `.env` file with the following variables:\r     ``` \r     CLIENT_ID=\r     CLIENT_SECRET=\r     REDIRECT_URI=http://localhost:8888/callback\r     ```\r     You can get the `CLIENT_ID` and `CLIENT_SECRET` from https://developer.spotify.com/. For now we can use our own applications but we will probably need a central one later. Make sure to add the `REDIRECT_URI` to the spotify app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@csil-git1.cs.surrey.sfu.ca:specifishity/spotify-autoplaylist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "knex": "^0.18.3",
+    "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

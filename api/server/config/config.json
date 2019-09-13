@@ -1,0 +1,32 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "spotify",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "use_env_variable": "",
+    "seederStorage": "sequelize"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "use_env_variable": "",
+    "seederStorage": "sequelize"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "spotify",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "use_env_variable": "DATABASE_URL",
+    "seederStorage": "sequelize"
+  }
+}
